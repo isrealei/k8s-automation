@@ -1,0 +1,37 @@
+# Variable for vpc creation 
+
+vpc_name: "k8s-vpc"
+
+# VPC RANGE
+
+vpc_cidr: "161.20.0.0/16"
+
+
+# Subnet cidr blocks
+
+pubsub1: 161.20.1.0/24
+pubsub2: 161.20.2.0/24
+pubsub3: 161.20.3.0/24
+prisub1: 161.20.4.0/24
+prisub2: 161.20.5.0/24
+prisub3: 161.20.6.0/24
+
+
+# region
+ region: us-east-2
+
+
+# zones
+
+zone1: us-east-2a
+zone2: us-east-2b
+zone3: us-east-2c
+
+
+
+# states
+
+state: present
+
+
+

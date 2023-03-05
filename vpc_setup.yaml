@@ -1,0 +1,22 @@
+--- 
+- name: creating of Vpc and subnets
+  hosts: localhost
+  gather_facts: false
+  connection: loca
+  tasks:
+  - name: Importing Variables
+    include_vars: vars/vpc_setup
+
+  - name:  Create VPC
+    ec2_vpc_net:
+      name: "{{vpc_name}}"
+    cidr_block: 10.10.0.0/16
+    region: us-east-1
+    tags:
+      module: ec2_vpc_net
+      this: works
+    tenancy: dedicated
+
+  -
+  -
+
