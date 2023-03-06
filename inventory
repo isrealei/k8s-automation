@@ -1,7 +1,7 @@
 # BEGIN ANSIBLE MANAGED BLOCK
-master ansible_host=161.20.1.186
-worker1 ansible_host=161.20.1.223
-worker2 ansible_host=161.20.1.243
+master ansible_host=161.20.1.117
+worker1 ansible_host=161.20.1.24
+worker2 ansible_host=161.20.1.99
 cntl ansible_host=127.0.0.1 ansible_connection=local
 
 

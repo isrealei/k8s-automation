@@ -4,3 +4,7 @@
   import_playbook: vpc_setup.yaml
 - name: vpc-set-up
   import_playbook: cluster.yaml
+- name: map host ips
+  import_playbook: set_host_names.yaml
+- name: run and initialise cluster
+  import_playbook: install.yaml
