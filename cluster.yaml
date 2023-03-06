@@ -176,8 +176,8 @@
       path: vars/hostips
       block: |
         master-node: "{{master_out.tagged_instances[0].private_ip}}"
-        worker1:  "{{worker_1_out.tagged_instances[0].private_ip}}"
-        worker2:  "{{worker_2_out.tagged_instances[0].private_ip}}"
+        worker1: "{{worker_1_out.tagged_instances[0].private_ip}}"
+        worker2: "{{worker_2_out.tagged_instances[0].private_ip}}"
 
   - name: create an inventory file for k8s cluster
     blockinfile:
