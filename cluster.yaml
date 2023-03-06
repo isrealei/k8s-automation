@@ -109,9 +109,9 @@
       wait: yes
       region: "{{region}}"
       group_id: "{{master_sg_out.group_id}}"
-      state: "{{state}}"
-      count: 1
-      vpc_subnet_id: "{{pubsub1}}"
+      exact_count: 1
+      wait_timeout: 300
+      vpc_subnet_id: "{{pub1id}}"
       assign_public_ip: yes
       instance_tags:
         Name: "Master-node"
@@ -124,11 +124,50 @@
     register: master_out
 
 
-
+  - name: ec2-instances for workernodes
+    ec2:
+      key_name: cluster_key
+      instance_type: t2.large
+      image: "{{master_ami}}"
+      wait: yes
+      region: "{{region}}"
+      exact_count: 1
+      wait_timeout: 300
+      vpc_subnet_id: "{{pub1id}}"
+      assign_public_ip: yes
+      instance_tags:
+        Name: "worker1"
+        project: cluster
+        owner: k8s
+      count_tag:
+        Name: "worker1"
+        project: cluster
+        owner: k8s
+    register: worker_1_out
   
 
 
-
+  - name: ec2-instances for workernodes
+    ec2:
+      key_name: cluster_key
+      instance_type: t2.large
+      image: "{{master_ami}}"
+      wait: yes
+      region: "{{region}}"
+      group_id: "{{worker_sg_out.group_id}}"
+      exact_count: 1
+      wait_timeout: 300
+      vpc_subnet_id: "{{pub1id}}"
+      assign_public_ip: yes
+      instance_tags:
+        Name: "worker2"
+        project: cluster
+        owner: k8s
+      count_tag:
+        Name: "worker2"
+        project: cluster
+        owner: k8s
+    register: worker_2_out
 
 
 
