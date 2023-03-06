@@ -1,5 +1,5 @@
 # BEGIN ANSIBLE MANAGED BLOCK
-master-node: "161.20.1.124"
-worker1:  "161.20.1.121"
-worker2:  "161.20.1.173"
+master-node: "161.20.1.186"
+worker1:  "161.20.1.223"
+worker2:  "161.20.1.243"
 # END ANSIBLE MANAGED BLOCK

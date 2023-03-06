@@ -1,0 +1,14 @@
+- name: this playbook is to set host ip mapping in etc/hosts directory
+  hosts: cluster
+  gather_facts: no
+  tasks:
+  - name:  import ips
+    include_vars: vars/hostips
+
+  - name: Update etc/host files on all nodes
+    blockinfile:
+      path: /etc/hosts
+      block: |
+        {{master-node}} master
+        {{worker1}} worker1
+        {{worker2}} worker2

@@ -1,5 +1,5 @@
 - name: This playbook is to set up the kubernetes worker node
-  hosts: mastergrp
+  hosts: cluster
   gather_facts: no
   become: yes
   tasks:
@@ -14,5 +14,7 @@
   
   - name: disable swapp
     shell: swapoff -a
+    args:
+     creates: swap.txt
 
-  
+  - 
