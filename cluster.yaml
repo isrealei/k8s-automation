@@ -131,6 +131,7 @@
       image: "{{master_ami}}"
       wait: yes
       region: "{{region}}"
+      group_id: "{{worker_sg_out.group_id}}"
       exact_count: 1
       wait_timeout: 300
       vpc_subnet_id: "{{pub1id}}"
