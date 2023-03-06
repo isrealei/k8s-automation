@@ -22,5 +22,5 @@
 
   - name: print output
     debug:
-      var: vpcout
+      var: vpcout.vpc.id
 
