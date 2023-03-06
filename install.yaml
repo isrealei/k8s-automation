@@ -15,7 +15,7 @@
   - name: disable swapp
     shell: swapoff -a
     args:
-     creates: swap.txt
+     removes: swap.txt
 
   - name: Copy script to nodes
     copy:
@@ -27,6 +27,7 @@
     script: /home/ubuntu/cont.sh 
     args:
       exeutable: /bin/bash
+      removes: cri.txt
 
   - name: Copy script to nodes
     copy:
@@ -37,4 +38,33 @@
   - name: Execute script file on remote host
     script: /home/ubuntu/kube.sh
     args:
-      exeutable: /bin/bash 
+      exeutable: /bin/bash
+      removes: kube.txt 
+
+
+- name: This playbook is to set up the kubernetes worker node
+  hosts: mastergrp
+  gather_facts: no
+  become: yes
+  tasks:
+  - name: Initialize Kubernetes cluster
+    command: kubeadm init
+    args:
+      removes: kube.yxy
+
+  - name: creat .kube directory
+    file:
+      path: /home/ubuntu/.kube
+      state: directory
+        
+  - name: Copy kube config file to home directory
+    copy: 
+      src: /etc/kubernetes/admin.conf
+      dest: /home/ubuntu/.kube/config
+      mode: 0755
+      owner: ubuntu
+      group: ubuntu
+      remote_src: yes
+
+  - name: ste host name
+    command: sudo hostnamectl set-hostname master
