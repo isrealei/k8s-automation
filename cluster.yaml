@@ -107,6 +107,7 @@
       instance_type: t2.medium
       image: "{{master_ami}}"
       wait: yes
+      region: "{{region}}"
       group_id: "{{master_sg_out.group_id}}"
       state: "{{state}}"
       count: 1
