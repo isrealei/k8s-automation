@@ -85,6 +85,8 @@
       routes:
       - dest: 0.0.0.0/0
         gateway_id: "{{ igw.gateway_id }}"
+      - dest: 172.20.0.0/16
+        vpc_peering_connection_id: pcx-07e5eee7102f784d3
     register: public_route_table
   
   - name: Gather all subnet_ids into a vraible file

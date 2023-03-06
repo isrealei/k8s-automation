@@ -1,0 +1,253 @@
+2023-03-06 15:31:13,057 p=12787 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with yaml plugin: YAML inventory has invalid structure, it should be a dictionary, got: <class
+'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2023-03-06 15:31:13,058 p=12787 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with ini plugin: /home/ubuntu/k8s-automation/inventory:20: Section [cluster:children] includes undefined group: master
+
+2023-03-06 15:31:13,058 p=12787 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/k8s-automation/inventory as an inventory source
+
+2023-03-06 15:31:13,058 p=12787 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-03-06 15:31:13,220 p=12787 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 15:31:13,233 p=12787 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:31:13,248 p=12787 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:31:13,253 p=12787 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:31:13,266 p=12787 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:31:13,271 p=12787 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:31:13,288 p=12787 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:31:13,294 p=12787 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 15:31:59,374 p=12787 u=ubuntu n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 161.20.1.124 port 22: Connection timed out", "unreachable": true}
+2023-03-06 15:31:59,376 p=12787 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 15:31:59,377 p=12787 u=ubuntu n=ansible | master                     : ok=3    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 15:34:42,087 p=12815 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with yaml plugin: YAML inventory has invalid structure, it should be a dictionary, got: <class
+'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2023-03-06 15:34:42,087 p=12815 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with ini plugin: /home/ubuntu/k8s-automation/inventory:20: Section [cluster:children] includes undefined group: master
+
+2023-03-06 15:34:42,087 p=12815 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/k8s-automation/inventory as an inventory source
+
+2023-03-06 15:34:42,088 p=12815 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-03-06 15:34:42,246 p=12815 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 15:34:42,259 p=12815 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:34:42,274 p=12815 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:34:42,279 p=12815 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:34:42,291 p=12815 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:34:42,297 p=12815 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:34:42,313 p=12815 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:34:42,318 p=12815 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 15:35:28,394 p=12815 u=ubuntu n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 161.20.1.124 port 22: Connection timed out", "unreachable": true}
+2023-03-06 15:35:28,397 p=12815 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 15:35:28,397 p=12815 u=ubuntu n=ansible | master                     : ok=3    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 15:41:16,651 p=12839 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with yaml plugin: YAML inventory has invalid structure, it should be a dictionary, got: <class
+'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2023-03-06 15:41:16,651 p=12839 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with ini plugin: /home/ubuntu/k8s-automation/inventory:20: Section [cluster:children] includes undefined group: master
+
+2023-03-06 15:41:16,651 p=12839 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/k8s-automation/inventory as an inventory source
+
+2023-03-06 15:41:16,652 p=12839 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-03-06 15:41:16,813 p=12839 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 15:41:16,825 p=12839 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:41:16,840 p=12839 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:41:16,845 p=12839 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:41:16,859 p=12839 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:41:16,864 p=12839 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:41:16,880 p=12839 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:41:16,885 p=12839 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 15:42:02,962 p=12839 u=ubuntu n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 161.20.1.124 port 22: Connection timed out", "unreachable": true}
+2023-03-06 15:42:02,964 p=12839 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 15:42:02,965 p=12839 u=ubuntu n=ansible | master                     : ok=3    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 15:42:45,647 p=12856 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with yaml plugin: YAML inventory has invalid structure, it should be a dictionary, got: <class
+'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2023-03-06 15:42:45,648 p=12856 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with ini plugin: /home/ubuntu/k8s-automation/inventory:20: Section [cluster:children] includes undefined group: master
+
+2023-03-06 15:42:45,648 p=12856 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/k8s-automation/inventory as an inventory source
+
+2023-03-06 15:42:45,648 p=12856 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-03-06 15:42:45,807 p=12856 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 15:42:45,820 p=12856 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:42:45,834 p=12856 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:42:45,839 p=12856 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:42:45,851 p=12856 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:42:45,856 p=12856 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:42:45,871 p=12856 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:42:45,876 p=12856 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 15:43:31,950 p=12856 u=ubuntu n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 161.20.1.124 port 22: Connection timed out", "unreachable": true}
+2023-03-06 15:43:31,953 p=12856 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 15:43:31,953 p=12856 u=ubuntu n=ansible | master                     : ok=3    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 15:50:46,947 p=12881 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with yaml plugin: YAML inventory has invalid structure, it should be a dictionary, got: <class
+'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2023-03-06 15:50:46,948 p=12881 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with ini plugin: /home/ubuntu/k8s-automation/inventory:20: Section [cluster:children] includes undefined group: master
+
+2023-03-06 15:50:46,948 p=12881 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/k8s-automation/inventory as an inventory source
+
+2023-03-06 15:50:46,948 p=12881 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-03-06 15:50:47,107 p=12881 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 15:50:47,120 p=12881 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:50:47,135 p=12881 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:50:47,139 p=12881 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:50:47,151 p=12881 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:50:47,156 p=12881 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:50:47,171 p=12881 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:50:47,177 p=12881 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 15:50:48,874 p=12881 u=ubuntu n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@161.20.1.124: Permission denied (publickey).", "unreachable": true}
+2023-03-06 15:50:48,876 p=12881 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 15:50:48,877 p=12881 u=ubuntu n=ansible | master                     : ok=3    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 15:52:04,498 p=12901 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with yaml plugin: YAML inventory has invalid structure, it should be a dictionary, got: <class
+'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2023-03-06 15:52:04,498 p=12901 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with ini plugin: /home/ubuntu/k8s-automation/inventory:20: Section [cluster:children] includes undefined group: master
+
+2023-03-06 15:52:04,499 p=12901 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/k8s-automation/inventory as an inventory source
+
+2023-03-06 15:52:04,499 p=12901 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-03-06 15:52:04,658 p=12901 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 15:52:04,671 p=12901 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:52:04,686 p=12901 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:52:04,691 p=12901 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:52:04,705 p=12901 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:52:04,710 p=12901 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:52:04,726 p=12901 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:52:04,731 p=12901 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 15:52:06,393 p=12901 u=ubuntu n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@161.20.1.124: Permission denied (publickey).", "unreachable": true}
+2023-03-06 15:52:06,395 p=12901 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 15:52:06,396 p=12901 u=ubuntu n=ansible | master                     : ok=3    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 15:57:21,769 p=12933 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with yaml plugin: YAML inventory has invalid structure, it should be a dictionary, got: <class
+'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2023-03-06 15:57:21,769 p=12933 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with ini plugin: /home/ubuntu/k8s-automation/inventory:20: Section [cluster:children] includes undefined group: master
+
+2023-03-06 15:57:21,770 p=12933 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/k8s-automation/inventory as an inventory source
+
+2023-03-06 15:57:21,770 p=12933 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-03-06 15:57:21,928 p=12933 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 15:57:21,941 p=12933 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:57:21,956 p=12933 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:57:21,960 p=12933 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:57:21,973 p=12933 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:57:21,978 p=12933 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 15:57:21,993 p=12933 u=ubuntu n=ansible | ok: [master]
+2023-03-06 15:57:21,998 p=12933 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 15:57:23,681 p=12933 u=ubuntu n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@161.20.1.124: Permission denied (publickey).", "unreachable": true}
+2023-03-06 15:57:23,682 p=12933 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 15:57:23,682 p=12933 u=ubuntu n=ansible | master                     : ok=3    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 16:05:18,928 p=12988 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with yaml plugin: YAML inventory has invalid structure, it should be a dictionary, got: <class
+'ansible.parsing.yaml.objects.AnsibleUnicode'>
+
+2023-03-06 16:05:18,928 p=12988 u=ubuntu n=ansible | [WARNING]:  * Failed to parse /home/ubuntu/k8s-automation/inventory with ini plugin: /home/ubuntu/k8s-automation/inventory:20: Section [cluster:children] includes undefined group: master
+
+2023-03-06 16:05:18,929 p=12988 u=ubuntu n=ansible | [WARNING]: Unable to parse /home/ubuntu/k8s-automation/inventory as an inventory source
+
+2023-03-06 16:05:18,929 p=12988 u=ubuntu n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2023-03-06 16:05:19,115 p=12988 u=ubuntu n=ansible | PLAY [creating of Vpc and subnets] *****************************************************************************************************************************************************************
+2023-03-06 16:05:19,128 p=12988 u=ubuntu n=ansible | TASK [Importing Variables] *************************************************************************************************************************************************************************
+2023-03-06 16:05:19,141 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:19,147 p=12988 u=ubuntu n=ansible | TASK [Create VPC] **********************************************************************************************************************************************************************************
+2023-03-06 16:05:21,065 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:21,072 p=12988 u=ubuntu n=ansible | TASK [print output] ********************************************************************************************************************************************************************************
+2023-03-06 16:05:21,105 p=12988 u=ubuntu n=ansible | ok: [localhost] => {
+    "vpcout.vpc.id": "vpc-0bbb843a09b4a9fa2"
+}
+2023-03-06 16:05:21,110 p=12988 u=ubuntu n=ansible | TASK [public subnet 1 creation] ********************************************************************************************************************************************************************
+2023-03-06 16:05:22,404 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:22,411 p=12988 u=ubuntu n=ansible | TASK [public subnet 2  creation] *******************************************************************************************************************************************************************
+2023-03-06 16:05:23,409 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:23,416 p=12988 u=ubuntu n=ansible | TASK [public subnet 3  creation] *******************************************************************************************************************************************************************
+2023-03-06 16:05:24,449 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:24,455 p=12988 u=ubuntu n=ansible | TASK [Create an Internrnt gate way for my vpc] *****************************************************************************************************************************************************
+2023-03-06 16:05:25,498 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:25,504 p=12988 u=ubuntu n=ansible | TASK [Creating a routing table] ********************************************************************************************************************************************************************
+2023-03-06 16:05:32,210 p=12988 u=ubuntu n=ansible | changed: [localhost]
+2023-03-06 16:05:32,218 p=12988 u=ubuntu n=ansible | TASK [Gather all subnet_ids into a vraible file] ***************************************************************************************************************************************************
+2023-03-06 16:05:32,254 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:32,260 p=12988 u=ubuntu n=ansible | TASK [create a vraible file] ***********************************************************************************************************************************************************************
+2023-03-06 16:05:32,994 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:33,005 p=12988 u=ubuntu n=ansible | PLAY [This playbook is for creating ec2 instancesd for master and worker-nodes] ********************************************************************************************************************
+2023-03-06 16:05:33,012 p=12988 u=ubuntu n=ansible | TASK [import variables] ****************************************************************************************************************************************************************************
+2023-03-06 16:05:33,025 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:33,030 p=12988 u=ubuntu n=ansible | TASK [import variable] *****************************************************************************************************************************************************************************
+2023-03-06 16:05:33,043 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:33,048 p=12988 u=ubuntu n=ansible | TASK [create security group for master node] *******************************************************************************************************************************************************
+2023-03-06 16:05:34,511 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:34,518 p=12988 u=ubuntu n=ansible | TASK [Update security group to allow traffic within itself] ****************************************************************************************************************************************
+2023-03-06 16:05:35,684 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:35,690 p=12988 u=ubuntu n=ansible | TASK [Create secuirty for worker-nodes] ************************************************************************************************************************************************************
+2023-03-06 16:05:36,946 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:36,952 p=12988 u=ubuntu n=ansible | TASK [Create secuirty for worker-nodes] ************************************************************************************************************************************************************
+2023-03-06 16:05:38,144 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:38,151 p=12988 u=ubuntu n=ansible | TASK [create key pair for all clusternodes] ********************************************************************************************************************************************************
+2023-03-06 16:05:39,126 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:39,133 p=12988 u=ubuntu n=ansible | TASK [store key into file for ssh] *****************************************************************************************************************************************************************
+2023-03-06 16:05:39,165 p=12988 u=ubuntu n=ansible | skipping: [localhost]
+2023-03-06 16:05:39,170 p=12988 u=ubuntu n=ansible | TASK [ec2 instance for master-node] ****************************************************************************************************************************************************************
+2023-03-06 16:05:40,368 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:40,375 p=12988 u=ubuntu n=ansible | TASK [ec2-instances for workernodes] ***************************************************************************************************************************************************************
+2023-03-06 16:05:41,393 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:41,399 p=12988 u=ubuntu n=ansible | TASK [ec2-instances for workernodes] ***************************************************************************************************************************************************************
+2023-03-06 16:05:42,433 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:42,438 p=12988 u=ubuntu n=ansible | TASK [Update all nodes ip into vars file] **********************************************************************************************************************************************************
+2023-03-06 16:05:42,814 p=12988 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:05:42,820 p=12988 u=ubuntu n=ansible | TASK [create an inventory file for k8s cluster] ****************************************************************************************************************************************************
+2023-03-06 16:05:43,062 p=12988 u=ubuntu n=ansible | changed: [localhost]
+2023-03-06 16:05:43,070 p=12988 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 16:05:43,071 p=12988 u=ubuntu n=ansible | localhost                  : ok=22   changed=2    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-03-06 16:09:55,045 p=13526 u=ubuntu n=ansible | PLAY [creating of Vpc and subnets] *****************************************************************************************************************************************************************
+2023-03-06 16:09:55,057 p=13526 u=ubuntu n=ansible | TASK [Importing Variables] *************************************************************************************************************************************************************************
+2023-03-06 16:09:55,073 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:09:55,078 p=13526 u=ubuntu n=ansible | TASK [Create VPC] **********************************************************************************************************************************************************************************
+2023-03-06 16:09:56,824 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:09:56,830 p=13526 u=ubuntu n=ansible | TASK [print output] ********************************************************************************************************************************************************************************
+2023-03-06 16:09:56,863 p=13526 u=ubuntu n=ansible | ok: [localhost] => {
+    "vpcout.vpc.id": "vpc-0bbb843a09b4a9fa2"
+}
+2023-03-06 16:09:56,869 p=13526 u=ubuntu n=ansible | TASK [public subnet 1 creation] ********************************************************************************************************************************************************************
+2023-03-06 16:09:58,019 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:09:58,025 p=13526 u=ubuntu n=ansible | TASK [public subnet 2  creation] *******************************************************************************************************************************************************************
+2023-03-06 16:09:59,021 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:09:59,027 p=13526 u=ubuntu n=ansible | TASK [public subnet 3  creation] *******************************************************************************************************************************************************************
+2023-03-06 16:10:00,051 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:00,057 p=13526 u=ubuntu n=ansible | TASK [Create an Internrnt gate way for my vpc] *****************************************************************************************************************************************************
+2023-03-06 16:10:01,133 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:01,140 p=13526 u=ubuntu n=ansible | TASK [Creating a routing table] ********************************************************************************************************************************************************************
+2023-03-06 16:10:08,946 p=13526 u=ubuntu n=ansible | changed: [localhost]
+2023-03-06 16:10:08,954 p=13526 u=ubuntu n=ansible | TASK [Gather all subnet_ids into a vraible file] ***************************************************************************************************************************************************
+2023-03-06 16:10:08,991 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:08,997 p=13526 u=ubuntu n=ansible | TASK [create a vraible file] ***********************************************************************************************************************************************************************
+2023-03-06 16:10:09,743 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:09,753 p=13526 u=ubuntu n=ansible | PLAY [This playbook is for creating ec2 instancesd for master and worker-nodes] ********************************************************************************************************************
+2023-03-06 16:10:09,759 p=13526 u=ubuntu n=ansible | TASK [import variables] ****************************************************************************************************************************************************************************
+2023-03-06 16:10:09,772 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:09,778 p=13526 u=ubuntu n=ansible | TASK [import variable] *****************************************************************************************************************************************************************************
+2023-03-06 16:10:09,792 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:09,797 p=13526 u=ubuntu n=ansible | TASK [create security group for master node] *******************************************************************************************************************************************************
+2023-03-06 16:10:11,274 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:11,282 p=13526 u=ubuntu n=ansible | TASK [Update security group to allow traffic within itself] ****************************************************************************************************************************************
+2023-03-06 16:10:12,473 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:12,480 p=13526 u=ubuntu n=ansible | TASK [Create secuirty for worker-nodes] ************************************************************************************************************************************************************
+2023-03-06 16:10:13,710 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:13,717 p=13526 u=ubuntu n=ansible | TASK [Create secuirty for worker-nodes] ************************************************************************************************************************************************************
+2023-03-06 16:10:14,937 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:14,944 p=13526 u=ubuntu n=ansible | TASK [create key pair for all clusternodes] ********************************************************************************************************************************************************
+2023-03-06 16:10:15,969 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:15,976 p=13526 u=ubuntu n=ansible | TASK [store key into file for ssh] *****************************************************************************************************************************************************************
+2023-03-06 16:10:16,007 p=13526 u=ubuntu n=ansible | skipping: [localhost]
+2023-03-06 16:10:16,013 p=13526 u=ubuntu n=ansible | TASK [ec2 instance for master-node] ****************************************************************************************************************************************************************
+2023-03-06 16:10:17,236 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:17,243 p=13526 u=ubuntu n=ansible | TASK [ec2-instances for workernodes] ***************************************************************************************************************************************************************
+2023-03-06 16:10:18,283 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:18,289 p=13526 u=ubuntu n=ansible | TASK [ec2-instances for workernodes] ***************************************************************************************************************************************************************
+2023-03-06 16:10:19,350 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:19,356 p=13526 u=ubuntu n=ansible | TASK [Update all nodes ip into vars file] **********************************************************************************************************************************************************
+2023-03-06 16:10:19,738 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:19,744 p=13526 u=ubuntu n=ansible | TASK [create an inventory file for k8s cluster] ****************************************************************************************************************************************************
+2023-03-06 16:10:19,988 p=13526 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 16:10:19,997 p=13526 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 16:10:19,997 p=13526 u=ubuntu n=ansible | localhost                  : ok=22   changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
