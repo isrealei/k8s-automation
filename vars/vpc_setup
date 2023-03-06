@@ -18,7 +18,7 @@ prisub3: 161.20.6.0/24
 
 
 # region
- region: us-east-2
+ region: "us-east-2"
 
 
 # zones
