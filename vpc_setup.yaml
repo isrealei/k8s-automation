@@ -23,4 +23,104 @@
   - name: print output
     debug:
       var: vpcout.vpc.id
+ 
+  - name: public subnet 1 creation
+    ec2_vpc_subnet:
+      state: present
+      region: "{{region}}"
+      vpc_id: "{{vpcout.vpc.id}}"
+      cidr: "{{pubsub1}}"
+      tags:
+       Name: public-sub-1
+      az: "{{zone1}}"
+      map_public: yes
+    register: pub1out
+
+  - name: public subnet 2  creation
+    ec2_vpc_subnet:
+      state: present
+      region: "{{region}}"
+      vpc_id: "{{vpcout.vpc.id}}"
+      cidr: "{{pubsub2}}"
+      tags:
+       Name: public-sub-2
+      az: "{{zone2}}"
+      map_public: yes
+    register: pub2out
+
+
+
+  - name: public subnet 3  creation
+    ec2_vpc_subnet:
+      state: present
+      region: "{{region}}"
+      vpc_id: "{{vpcout.vpc.id}}"
+      cidr: "{{pubsub3}}"
+      tags:
+       Name: public-sub-1
+      az: "{{zone3}}"
+      map_public: yes
+    register: pub3out
+ 
+  - name: Create an Internrnt gate way for my vpc
+    ec2_vpc_igw:
+     vpc_id: "{{vpcout.vpc.id}}"
+     state: "{{state}}"
+     region: "{{region}}"
+     tags:
+      Name: Internet-gateway    
+    register: igw
+
+  - name:  Creating a routing table
+    ec2_vpc_route_table:
+      vpc_id: "{{vpcout.vpc.id}}"
+      state: "{{state}}"
+      region: "{{region}}"
+      tags:
+        Name: Public
+      subnets:
+      - "{{ pub1out.subnet.id }}"
+      - "{{ pub2out.subnet.id }}"
+      - "{{ pub3out.subnet.id }}"
+      routes:
+      - dest: 0.0.0.0/0
+        gateway_id: "{{ igw.gateway_id }}"
+    register: public_route_table
+  
+  - name: Gather all subnet_ids into a vraible file
+    set_fact:
+       vpcid: "{{vpcout.vpc.id}}"
+       pub1id: "{{ pub1out.subnet.id }}"
+       pub2id: "{{ pub2out.subnet.id }}"
+       pub3id: "{{ pub3out.subnet.id}}"
+       igwid:  "{{igw.gateway_id}}"
+
+  - name: create a vraible file 
+    copy:
+      content: "vpcid: {{vpcout.vpc.id}}\npub1id: {{ pub1out.subnet.id }}\npub2id: {{ pub2out.subnet.id }}\npub3id: {{ pub3out.subnet.id}}\nigwid: {{igw.gateway_id}}"
+      dest: vars/output-vars
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
