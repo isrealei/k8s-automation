@@ -10,13 +10,17 @@
   - name:  Create VPC
     ec2_vpc_net:
       name: "{{vpc_name}}"
-    cidr_block: 10.10.0.0/16
-    region: us-east-1
-    tags:
-      module: ec2_vpc_net
-      this: works
-    tenancy: dedicated
+      cidr_block: "{{vpc_cidr}}"
+      region: "{{region}}"
+      tags:
+        project: k8s
+      tenancy: default
+      dns_hostnames: yes
+      dns_support: yes
+      state: "{{state}}"
+    register: vpcout
 
-  -
-  -
+  - name: print output
+    debug:
+      var: vpcout
 
