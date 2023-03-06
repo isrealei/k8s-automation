@@ -105,7 +105,7 @@
     ec2:
       key_name: cluster_key
       instance_type: t2.medium
-      image: "{{master_id}}"
+      image: "{{master_ami}}"
       wait: yes
       group_id: "{{master_sg_out.group_id}}"
       state: "{{state}}"
