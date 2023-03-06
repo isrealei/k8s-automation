@@ -34,4 +34,5 @@ zone3: us-east-2c
 state: present
 
 
+master_ami: ami-00eeedc4036573771
 
