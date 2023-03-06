@@ -1054,3 +1054,48 @@ The offending line appears to be:
 2023-03-06 18:02:31,789 p=18292 u=ubuntu n=ansible | master                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2023-03-06 18:02:31,789 p=18292 u=ubuntu n=ansible | worker1                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 2023-03-06 18:02:31,789 p=18292 u=ubuntu n=ansible | worker2                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:17:31,459 p=18392 u=ubuntu n=ansible | ERROR! the playbook: install.sh could not be found
+2023-03-06 18:17:49,238 p=18393 u=ubuntu n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/home/ubuntu/k8s-automation/install.yaml': line 27, column 13, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  - name: Execute script file on remote host
+      script: /home/ubuntu/cont.sh
+            ^ here
+
+2023-03-06 18:18:22,353 p=18399 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 18:18:22,366 p=18399 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:18:22,410 p=18399 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:18:22,417 p=18399 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:18:22,425 p=18399 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:18:22,428 p=18399 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:18:22,462 p=18399 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:18:22,469 p=18399 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:18:22,475 p=18399 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:18:22,479 p=18399 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:18:22,514 p=18399 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:18:22,520 p=18399 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:18:22,526 p=18399 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:18:22,532 p=18399 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 18:18:24,155 p=18399 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:18:24,164 p=18399 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:18:24,165 p=18399 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:18:24,172 p=18399 u=ubuntu n=ansible | TASK [Copy script to nodes] ************************************************************************************************************************************************************************
+2023-03-06 18:18:25,797 p=18399 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:18:25,799 p=18399 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:18:25,803 p=18399 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:18:25,811 p=18399 u=ubuntu n=ansible | TASK [Execute script file on remote host] **********************************************************************************************************************************************************
+2023-03-06 18:18:25,973 p=18399 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:18:25,983 p=18399 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:18:25,987 p=18399 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:18:25,989 p=18399 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:18:25,989 p=18399 u=ubuntu n=ansible | master                     : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:18:25,989 p=18399 u=ubuntu n=ansible | worker1                    : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:18:25,989 p=18399 u=ubuntu n=ansible | worker2                    : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   

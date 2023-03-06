@@ -17,4 +17,12 @@
     args:
      creates: swap.txt
 
-  - 
+  - name: Copy script to nodes
+    copy:
+      src: templates/cont.sh
+      dest: /home/ubuntu/cont.sh
+      mode: '0755'
+
+  - name: Execute script file on remote host
+    script: /home/ubuntu/cont.sh
+
