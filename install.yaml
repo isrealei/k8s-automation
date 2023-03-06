@@ -24,5 +24,17 @@
       mode: '0755'
 
   - name: Execute script file on remote host
-    script: /home/ubuntu/cont.sh
+    script: /home/ubuntu/cont.sh 
+    args:
+      exeutable: /bin/bash
 
+  - name: Copy script to nodes
+    copy:
+      src: templates/kube.sh
+      dest: /home/ubuntu/kube.sh
+      mode: '0755'
+
+  - name: Execute script file on remote host
+    script: /home/ubuntu/kube.sh
+    args:
+      exeutable: /bin/bash 

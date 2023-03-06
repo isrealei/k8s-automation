@@ -1099,3 +1099,278 @@ The offending line appears to be:
 2023-03-06 18:18:25,989 p=18399 u=ubuntu n=ansible | master                     : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
 2023-03-06 18:18:25,989 p=18399 u=ubuntu n=ansible | worker1                    : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
 2023-03-06 18:18:25,989 p=18399 u=ubuntu n=ansible | worker2                    : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:20:09,482 p=18536 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 18:20:09,495 p=18536 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:20:09,542 p=18536 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:20:09,548 p=18536 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:20:09,554 p=18536 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:20:09,559 p=18536 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:20:09,599 p=18536 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:20:09,601 p=18536 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:20:09,606 p=18536 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:20:09,611 p=18536 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:20:09,651 p=18536 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:20:09,654 p=18536 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:20:09,658 p=18536 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:20:09,663 p=18536 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 18:20:11,295 p=18536 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:20:11,297 p=18536 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:20:11,301 p=18536 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:20:11,306 p=18536 u=ubuntu n=ansible | TASK [Copy script to nodes] ************************************************************************************************************************************************************************
+2023-03-06 18:20:12,745 p=18536 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:20:12,750 p=18536 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:20:12,750 p=18536 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:20:12,758 p=18536 u=ubuntu n=ansible | TASK [Execute script file on remote host] **********************************************************************************************************************************************************
+2023-03-06 18:20:12,910 p=18536 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:20:12,923 p=18536 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:20:12,928 p=18536 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:20:12,930 p=18536 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:20:12,930 p=18536 u=ubuntu n=ansible | master                     : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:20:12,930 p=18536 u=ubuntu n=ansible | worker1                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:20:12,930 p=18536 u=ubuntu n=ansible | worker2                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:26:30,652 p=18666 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 18:26:30,665 p=18666 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:26:30,713 p=18666 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:26:30,715 p=18666 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:26:30,722 p=18666 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:26:30,727 p=18666 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:26:30,764 p=18666 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:26:30,767 p=18666 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:26:30,773 p=18666 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:26:30,778 p=18666 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:26:30,814 p=18666 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:26:30,817 p=18666 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:26:30,824 p=18666 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:26:30,829 p=18666 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 18:26:32,466 p=18666 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:26:32,471 p=18666 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:26:32,474 p=18666 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:26:32,479 p=18666 u=ubuntu n=ansible | TASK [Copy script to nodes] ************************************************************************************************************************************************************************
+2023-03-06 18:26:33,912 p=18666 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:26:33,923 p=18666 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:26:33,924 p=18666 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:26:33,933 p=18666 u=ubuntu n=ansible | TASK [Execute script file on remote host] **********************************************************************************************************************************************************
+2023-03-06 18:26:34,098 p=18666 u=ubuntu n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: IndexError: list index out of range
+2023-03-06 18:26:34,099 p=18666 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"msg": "Unexpected failure during module execution.", "stdout": ""}
+2023-03-06 18:26:34,109 p=18666 u=ubuntu n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: IndexError: list index out of range
+2023-03-06 18:26:34,109 p=18666 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"msg": "Unexpected failure during module execution.", "stdout": ""}
+2023-03-06 18:26:34,112 p=18666 u=ubuntu n=ansible | An exception occurred during task execution. To see the full traceback, use -vvv. The error was: IndexError: list index out of range
+2023-03-06 18:26:34,112 p=18666 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"msg": "Unexpected failure during module execution.", "stdout": ""}
+2023-03-06 18:26:34,114 p=18666 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:26:34,114 p=18666 u=ubuntu n=ansible | master                     : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:26:34,114 p=18666 u=ubuntu n=ansible | worker1                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:26:34,114 p=18666 u=ubuntu n=ansible | worker2                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:32:23,051 p=18812 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 18:32:23,064 p=18812 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:32:23,112 p=18812 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:32:23,114 p=18812 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:32:23,120 p=18812 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:32:23,125 p=18812 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:32:23,158 p=18812 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:32:23,162 p=18812 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:32:23,169 p=18812 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:32:23,173 p=18812 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:32:23,206 p=18812 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:32:23,213 p=18812 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:32:23,218 p=18812 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:32:23,223 p=18812 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 18:32:24,854 p=18812 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:32:24,857 p=18812 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:32:24,857 p=18812 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:32:24,865 p=18812 u=ubuntu n=ansible | TASK [Copy script to nodes] ************************************************************************************************************************************************************************
+2023-03-06 18:32:26,450 p=18812 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:32:26,451 p=18812 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:32:26,456 p=18812 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:32:26,463 p=18812 u=ubuntu n=ansible | TASK [Execute script file on remote host] **********************************************************************************************************************************************************
+2023-03-06 18:32:26,609 p=18812 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"changed": false, "msg": "Could not find or access 'cont.sh'\nSearched in:\n\t/home/ubuntu/k8s-automation/files/cont.sh\n\t/home/ubuntu/k8s-automation/cont.sh\n\t/home/ubuntu/k8s-automation/files/cont.sh\n\t/home/ubuntu/k8s-automation/cont.sh on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:32:26,627 p=18812 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"changed": false, "msg": "Could not find or access 'cont.sh'\nSearched in:\n\t/home/ubuntu/k8s-automation/files/cont.sh\n\t/home/ubuntu/k8s-automation/cont.sh\n\t/home/ubuntu/k8s-automation/files/cont.sh\n\t/home/ubuntu/k8s-automation/cont.sh on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:32:26,631 p=18812 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"changed": false, "msg": "Could not find or access 'cont.sh'\nSearched in:\n\t/home/ubuntu/k8s-automation/files/cont.sh\n\t/home/ubuntu/k8s-automation/cont.sh\n\t/home/ubuntu/k8s-automation/files/cont.sh\n\t/home/ubuntu/k8s-automation/cont.sh on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:32:26,633 p=18812 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:32:26,633 p=18812 u=ubuntu n=ansible | master                     : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:32:26,633 p=18812 u=ubuntu n=ansible | worker1                    : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:32:26,634 p=18812 u=ubuntu n=ansible | worker2                    : ok=5    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:33:30,134 p=18943 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 18:33:30,147 p=18943 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:33:30,195 p=18943 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:33:30,196 p=18943 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:33:30,204 p=18943 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:33:30,208 p=18943 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:33:30,242 p=18943 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:33:30,249 p=18943 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:33:30,254 p=18943 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:33:30,258 p=18943 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:33:30,294 p=18943 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:33:30,300 p=18943 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:33:30,305 p=18943 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:33:30,311 p=18943 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 18:33:31,834 p=18943 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:33:31,848 p=18943 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:33:31,851 p=18943 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:33:31,856 p=18943 u=ubuntu n=ansible | TASK [Copy script to nodes] ************************************************************************************************************************************************************************
+2023-03-06 18:33:33,253 p=18943 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:33:33,259 p=18943 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:33:33,260 p=18943 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:33:33,269 p=18943 u=ubuntu n=ansible | TASK [Execute script file on remote host] **********************************************************************************************************************************************************
+2023-03-06 18:33:33,415 p=18943 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:33:33,443 p=18943 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:33:33,446 p=18943 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:33:33,448 p=18943 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:33:33,448 p=18943 u=ubuntu n=ansible | master                     : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:33:33,448 p=18943 u=ubuntu n=ansible | worker1                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:33:33,449 p=18943 u=ubuntu n=ansible | worker2                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:36:11,457 p=19069 u=ubuntu n=ansible | ERROR! conflicting action statements: script, remote_src
+
+The error appears to be in '/home/ubuntu/k8s-automation/install.yaml': line 26, column 5, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+  - name: Execute script file on remote host
+    ^ here
+
+2023-03-06 18:38:18,728 p=19077 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 18:38:18,741 p=19077 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:38:18,786 p=19077 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:38:18,790 p=19077 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:38:18,796 p=19077 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:38:18,801 p=19077 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:38:18,839 p=19077 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:38:18,842 p=19077 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:38:18,848 p=19077 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:38:18,852 p=19077 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:38:18,886 p=19077 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:38:18,892 p=19077 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:38:18,899 p=19077 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:38:18,903 p=19077 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 18:38:20,525 p=19077 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:38:20,528 p=19077 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:38:20,531 p=19077 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:38:20,539 p=19077 u=ubuntu n=ansible | TASK [Copy script to nodes] ************************************************************************************************************************************************************************
+2023-03-06 18:38:21,909 p=19077 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:38:21,912 p=19077 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:38:21,915 p=19077 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:38:21,939 p=19077 u=ubuntu n=ansible | TASK [Execute script file on remote host] **********************************************************************************************************************************************************
+2023-03-06 18:38:21,963 p=19077 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"msg": "'cluster' is undefined"}
+2023-03-06 18:38:21,984 p=19077 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"msg": "'cluster' is undefined"}
+2023-03-06 18:38:21,995 p=19077 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"msg": "'cluster' is undefined"}
+2023-03-06 18:38:21,997 p=19077 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:38:21,997 p=19077 u=ubuntu n=ansible | master                     : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:38:21,997 p=19077 u=ubuntu n=ansible | worker1                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:38:21,997 p=19077 u=ubuntu n=ansible | worker2                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:39:02,748 p=19189 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 18:39:02,761 p=19189 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:39:02,809 p=19189 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:39:02,816 p=19189 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:39:02,820 p=19189 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:39:02,825 p=19189 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:39:02,862 p=19189 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:39:02,869 p=19189 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:39:02,874 p=19189 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:39:02,879 p=19189 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:39:02,917 p=19189 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:39:02,919 p=19189 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:39:02,930 p=19189 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:39:02,935 p=19189 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 18:39:03,868 p=19189 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:39:03,871 p=19189 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:39:03,874 p=19189 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:39:03,880 p=19189 u=ubuntu n=ansible | TASK [Copy script to nodes] ************************************************************************************************************************************************************************
+2023-03-06 18:39:05,257 p=19189 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:39:05,269 p=19189 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:39:05,272 p=19189 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:39:05,295 p=19189 u=ubuntu n=ansible | TASK [Execute script file on remote host] **********************************************************************************************************************************************************
+2023-03-06 18:39:07,036 p=19189 u=ubuntu n=ansible | fatal: [master]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@161.20.1.186: Permission denied (publickey).", "unreachable": true}
+2023-03-06 18:39:07,056 p=19189 u=ubuntu n=ansible | fatal: [worker1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@161.20.1.186: Permission denied (publickey).", "unreachable": true}
+2023-03-06 18:39:07,079 p=19189 u=ubuntu n=ansible | fatal: [worker2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ubuntu@161.20.1.186: Permission denied (publickey).", "unreachable": true}
+2023-03-06 18:39:07,081 p=19189 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:39:07,082 p=19189 u=ubuntu n=ansible | master                     : ok=5    changed=1    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:39:07,082 p=19189 u=ubuntu n=ansible | worker1                    : ok=5    changed=1    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:39:07,082 p=19189 u=ubuntu n=ansible | worker2                    : ok=5    changed=1    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:40:52,825 p=19304 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 18:40:52,838 p=19304 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:40:52,882 p=19304 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:40:52,889 p=19304 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:40:52,894 p=19304 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:40:52,898 p=19304 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:40:52,934 p=19304 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:40:52,936 p=19304 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:40:52,945 p=19304 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:40:52,948 p=19304 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:40:52,982 p=19304 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:40:52,988 p=19304 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:40:52,993 p=19304 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:40:52,998 p=19304 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 18:40:54,615 p=19304 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:40:54,618 p=19304 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:40:54,620 p=19304 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:40:54,627 p=19304 u=ubuntu n=ansible | TASK [Copy script to nodes] ************************************************************************************************************************************************************************
+2023-03-06 18:40:55,981 p=19304 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:40:55,989 p=19304 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:40:55,994 p=19304 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:40:56,018 p=19304 u=ubuntu n=ansible | TASK [Execute script file on remote host] **********************************************************************************************************************************************************
+2023-03-06 18:40:56,064 p=19304 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"msg": "'master' is undefined"}
+2023-03-06 18:40:56,069 p=19304 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"msg": "'master' is undefined"}
+2023-03-06 18:40:56,070 p=19304 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"msg": "'master' is undefined"}
+2023-03-06 18:40:56,072 p=19304 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:40:56,072 p=19304 u=ubuntu n=ansible | master                     : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:40:56,073 p=19304 u=ubuntu n=ansible | worker1                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:40:56,073 p=19304 u=ubuntu n=ansible | worker2                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:44:28,464 p=19422 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 18:44:28,477 p=19422 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:44:28,523 p=19422 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:44:28,528 p=19422 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:44:28,533 p=19422 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:44:28,538 p=19422 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:44:28,575 p=19422 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:44:28,578 p=19422 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:44:28,583 p=19422 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:44:28,588 p=19422 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:44:28,628 p=19422 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:44:28,629 p=19422 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:44:28,635 p=19422 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:44:28,640 p=19422 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 18:44:30,241 p=19422 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:44:30,266 p=19422 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:44:30,272 p=19422 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:44:30,277 p=19422 u=ubuntu n=ansible | TASK [Copy script to nodes] ************************************************************************************************************************************************************************
+2023-03-06 18:44:31,650 p=19422 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:44:31,654 p=19422 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:44:31,659 p=19422 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:44:31,664 p=19422 u=ubuntu n=ansible | TASK [Execute script file on remote host] **********************************************************************************************************************************************************
+2023-03-06 18:44:31,815 p=19422 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:44:31,831 p=19422 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:44:31,834 p=19422 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ubuntu/cont.sh' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2023-03-06 18:44:31,836 p=19422 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:44:31,836 p=19422 u=ubuntu n=ansible | master                     : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:44:31,837 p=19422 u=ubuntu n=ansible | worker1                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:44:31,837 p=19422 u=ubuntu n=ansible | worker2                    : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:47:50,451 p=19549 u=ubuntu n=ansible | PLAY [This playbook is to set up the kubernetes worker node] ***************************************************************************************************************************************
+2023-03-06 18:47:50,464 p=19549 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:47:50,515 p=19549 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:47:50,517 p=19549 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:47:50,520 p=19549 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:47:50,525 p=19549 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:47:50,562 p=19549 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:47:50,564 p=19549 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:47:50,572 p=19549 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:47:50,577 p=19549 u=ubuntu n=ansible | TASK [import varaibles] ****************************************************************************************************************************************************************************
+2023-03-06 18:47:50,609 p=19549 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:47:50,617 p=19549 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:47:50,622 p=19549 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:47:50,627 p=19549 u=ubuntu n=ansible | TASK [disable swapp] *******************************************************************************************************************************************************************************
+2023-03-06 18:47:52,261 p=19549 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:47:52,263 p=19549 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:47:52,267 p=19549 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:47:52,273 p=19549 u=ubuntu n=ansible | TASK [Copy script to nodes] ************************************************************************************************************************************************************************
+2023-03-06 18:47:53,643 p=19549 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:47:53,647 p=19549 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:47:53,651 p=19549 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:47:53,658 p=19549 u=ubuntu n=ansible | TASK [Execute script file on remote host] **********************************************************************************************************************************************************
+2023-03-06 18:48:07,824 p=19549 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:48:07,831 p=19549 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:48:07,834 p=19549 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:48:07,843 p=19549 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:48:07,843 p=19549 u=ubuntu n=ansible | master                     : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:48:07,843 p=19549 u=ubuntu n=ansible | worker1                    : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:48:07,843 p=19549 u=ubuntu n=ansible | worker2                    : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
