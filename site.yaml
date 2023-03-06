@@ -1,0 +1,6 @@
+---
+
+- name: vpc-set-up
+  import_playbook: vpc_setup.yaml
+- name: vpc-set-up
+  import_playbook: cluster.yaml

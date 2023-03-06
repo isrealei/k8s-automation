@@ -170,4 +170,43 @@
     register: worker_2_out
 
 
+  - name: Update all nodes ip into vars file
+    blockinfile:
+      path: vars/hostips
+      block: |
+        master-node: "{{master_out.tagged_instances[0].private_ip}}"
+        worker1:  "{{worker_1_out.tagged_instances[0].private_ip}}"
+        worker2:  "{{worker_2_out.tagged_instances[0].private_ip}}"
+
+  - name: create an inventory file for k8s cluster
+    blockinfile:
+      path: inventory
+      block: |
+        master ansible_host={{master_out.tagged_instances[0].private_ip}}
+        worker1 ansible_host={{worker_1_out.tagged_instances[0].private_ip}}
+        worker2 ansible_host={{worker_2_out.tagged_instances[0].private_ip}}
+        cntl ansible_host=127.0.0.1 ansible_connection=local
+
+
+        [mastergrp]
+
+        master
+
+
+        [workergrp]
+
+        worker1
+        worker2
+
+
+        [cluster:children]
+        master
+        worker1
+        worker2
+
+
+
+        [cluster:vars]
+        ansible_user=ubuntu
+        ansible_ssh_private_key_file=cluster_key.pem
 
