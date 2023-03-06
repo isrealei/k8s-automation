@@ -9,6 +9,6 @@
     blockinfile:
       path: /etc/hosts
       block: |
-        {{master-node}} master
+        {{master-node}} master-node
         {{worker1}} worker1
         {{worker2}} worker2

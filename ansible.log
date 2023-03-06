@@ -889,3 +889,100 @@ The offending line appears to be:
 2023-03-06 17:11:08,562 p=16604 u=ubuntu n=ansible | master                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
 2023-03-06 17:11:08,563 p=16604 u=ubuntu n=ansible | worker1                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
 2023-03-06 17:11:08,563 p=16604 u=ubuntu n=ansible | worker2                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 17:16:10,421 p=16656 u=ubuntu n=ansible | PLAY [this playbook is to set host ip mapping in etc/hosts directory] ******************************************************************************************************************************
+2023-03-06 17:16:10,433 p=16656 u=ubuntu n=ansible | TASK [import ips] **********************************************************************************************************************************************************************************
+2023-03-06 17:16:10,477 p=16656 u=ubuntu n=ansible | ok: [master]
+2023-03-06 17:16:10,480 p=16656 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 17:16:10,486 p=16656 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 17:16:10,490 p=16656 u=ubuntu n=ansible | TASK [Update etc/host files on all nodes] **********************************************************************************************************************************************************
+2023-03-06 17:16:10,570 p=16656 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 17:16:10,585 p=16656 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 17:16:10,591 p=16656 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 17:16:10,593 p=16656 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 17:16:10,593 p=16656 u=ubuntu n=ansible | master                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 17:16:10,593 p=16656 u=ubuntu n=ansible | worker1                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 17:16:10,594 p=16656 u=ubuntu n=ansible | worker2                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 17:19:10,917 p=16681 u=ubuntu n=ansible | PLAY [this playbook is to set host ip mapping in etc/hosts directory] ******************************************************************************************************************************
+2023-03-06 17:19:10,930 p=16681 u=ubuntu n=ansible | TASK [import ips] **********************************************************************************************************************************************************************************
+2023-03-06 17:19:10,976 p=16681 u=ubuntu n=ansible | ok: [master]
+2023-03-06 17:19:10,981 p=16681 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 17:19:10,984 p=16681 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 17:19:10,989 p=16681 u=ubuntu n=ansible | TASK [Update etc/host files on all nodes] **********************************************************************************************************************************************************
+2023-03-06 17:19:11,067 p=16681 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 17:19:11,084 p=16681 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 17:19:11,091 p=16681 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 17:19:11,093 p=16681 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 17:19:11,093 p=16681 u=ubuntu n=ansible | master                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 17:19:11,094 p=16681 u=ubuntu n=ansible | worker1                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 17:19:11,094 p=16681 u=ubuntu n=ansible | worker2                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 17:36:12,902 p=16745 u=ubuntu n=ansible | PLAY [This playbook is for creating ec2 instancesd for master and worker-nodes] ********************************************************************************************************************
+2023-03-06 17:36:12,915 p=16745 u=ubuntu n=ansible | TASK [import variables] ****************************************************************************************************************************************************************************
+2023-03-06 17:36:12,929 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:12,934 p=16745 u=ubuntu n=ansible | TASK [import variable] *****************************************************************************************************************************************************************************
+2023-03-06 17:36:12,946 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:12,951 p=16745 u=ubuntu n=ansible | TASK [create security group for master node] *******************************************************************************************************************************************************
+2023-03-06 17:36:14,572 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:14,579 p=16745 u=ubuntu n=ansible | TASK [Update security group to allow traffic within itself] ****************************************************************************************************************************************
+2023-03-06 17:36:15,770 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:15,776 p=16745 u=ubuntu n=ansible | TASK [Create secuirty for worker-nodes] ************************************************************************************************************************************************************
+2023-03-06 17:36:17,002 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:17,008 p=16745 u=ubuntu n=ansible | TASK [Create secuirty for worker-nodes] ************************************************************************************************************************************************************
+2023-03-06 17:36:18,199 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:18,206 p=16745 u=ubuntu n=ansible | TASK [create key pair for all clusternodes] ********************************************************************************************************************************************************
+2023-03-06 17:36:19,199 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:19,206 p=16745 u=ubuntu n=ansible | TASK [store key into file for ssh] *****************************************************************************************************************************************************************
+2023-03-06 17:36:19,236 p=16745 u=ubuntu n=ansible | skipping: [localhost]
+2023-03-06 17:36:19,242 p=16745 u=ubuntu n=ansible | TASK [ec2 instance for master-node] ****************************************************************************************************************************************************************
+2023-03-06 17:36:20,454 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:20,461 p=16745 u=ubuntu n=ansible | TASK [ec2-instances for workernodes] ***************************************************************************************************************************************************************
+2023-03-06 17:36:21,480 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:21,486 p=16745 u=ubuntu n=ansible | TASK [ec2-instances for workernodes] ***************************************************************************************************************************************************************
+2023-03-06 17:36:22,484 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:22,490 p=16745 u=ubuntu n=ansible | TASK [Update all nodes ip into vars file] **********************************************************************************************************************************************************
+2023-03-06 17:36:22,865 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:22,871 p=16745 u=ubuntu n=ansible | TASK [create an inventory file for k8s cluster] ****************************************************************************************************************************************************
+2023-03-06 17:36:23,117 p=16745 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:23,125 p=16745 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 17:36:23,126 p=16745 u=ubuntu n=ansible | localhost                  : ok=12   changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-03-06 17:36:45,199 p=17055 u=ubuntu n=ansible | PLAY [This playbook is for creating ec2 instancesd for master and worker-nodes] ********************************************************************************************************************
+2023-03-06 17:36:45,213 p=17055 u=ubuntu n=ansible | TASK [import variables] ****************************************************************************************************************************************************************************
+2023-03-06 17:36:45,227 p=17055 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:45,232 p=17055 u=ubuntu n=ansible | TASK [import variable] *****************************************************************************************************************************************************************************
+2023-03-06 17:36:45,244 p=17055 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:45,249 p=17055 u=ubuntu n=ansible | TASK [create security group for master node] *******************************************************************************************************************************************************
+2023-03-06 17:36:46,641 p=17055 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:46,649 p=17055 u=ubuntu n=ansible | TASK [Update security group to allow traffic within itself] ****************************************************************************************************************************************
+2023-03-06 17:36:47,840 p=17055 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:47,846 p=17055 u=ubuntu n=ansible | TASK [Create secuirty for worker-nodes] ************************************************************************************************************************************************************
+2023-03-06 17:36:49,013 p=17055 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:49,020 p=17055 u=ubuntu n=ansible | TASK [Create secuirty for worker-nodes] ************************************************************************************************************************************************************
+2023-03-06 17:36:50,200 p=17055 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:50,206 p=17055 u=ubuntu n=ansible | TASK [create key pair for all clusternodes] ********************************************************************************************************************************************************
+2023-03-06 17:36:51,202 p=17055 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:51,210 p=17055 u=ubuntu n=ansible | TASK [store key into file for ssh] *****************************************************************************************************************************************************************
+2023-03-06 17:36:51,240 p=17055 u=ubuntu n=ansible | skipping: [localhost]
+2023-03-06 17:36:51,245 p=17055 u=ubuntu n=ansible | TASK [ec2 instance for master-node] ****************************************************************************************************************************************************************
+2023-03-06 17:36:52,379 p=17055 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:52,386 p=17055 u=ubuntu n=ansible | TASK [ec2-instances for workernodes] ***************************************************************************************************************************************************************
+2023-03-06 17:36:53,355 p=17055 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:53,361 p=17055 u=ubuntu n=ansible | TASK [ec2-instances for workernodes] ***************************************************************************************************************************************************************
+2023-03-06 17:36:54,336 p=17055 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:54,342 p=17055 u=ubuntu n=ansible | TASK [Update all nodes ip into vars file] **********************************************************************************************************************************************************
+2023-03-06 17:36:54,723 p=17055 u=ubuntu n=ansible | changed: [localhost]
+2023-03-06 17:36:54,729 p=17055 u=ubuntu n=ansible | TASK [create an inventory file for k8s cluster] ****************************************************************************************************************************************************
+2023-03-06 17:36:54,977 p=17055 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 17:36:54,986 p=17055 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 17:36:54,987 p=17055 u=ubuntu n=ansible | localhost                  : ok=12   changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-03-06 17:37:17,743 p=17359 u=ubuntu n=ansible | PLAY [this playbook is to set host ip mapping in etc/hosts directory] ******************************************************************************************************************************
+2023-03-06 17:37:17,755 p=17359 u=ubuntu n=ansible | TASK [import ips] **********************************************************************************************************************************************************************************
+2023-03-06 17:37:17,799 p=17359 u=ubuntu n=ansible | ok: [master]
+2023-03-06 17:37:17,802 p=17359 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 17:37:17,807 p=17359 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 17:37:17,811 p=17359 u=ubuntu n=ansible | TASK [Update etc/host files on all nodes] **********************************************************************************************************************************************************
+2023-03-06 17:37:17,893 p=17359 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 17:37:17,907 p=17359 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 17:37:17,913 p=17359 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 17:37:17,915 p=17359 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 17:37:17,916 p=17359 u=ubuntu n=ansible | master                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 17:37:17,916 p=17359 u=ubuntu n=ansible | worker1                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 17:37:17,916 p=17359 u=ubuntu n=ansible | worker2                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
