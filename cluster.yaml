@@ -95,8 +95,39 @@
 
   - name: store key into file for ssh
     copy: 
-     content: "{{cluster_key_out.private_key}}"
+     content: "{{cluster_key_out.key.private_key}}"
      dest: "./cluster_key.pem"
      mode: 0600
     when: cluster_key_out.changed 
+
+
+  - name: ec2 instance for master-node
+    ec2:
+      key_name: cluster_key
+      instance_type: t2.medium
+      image: "{{master_id}}"
+      wait: yes
+      group_id: "{{master_sg_out.group_id}}"
+      state: "{{state}}"
+      count: 1
+      vpc_subnet_id: "{{pubsub1}}"
+      assign_public_ip: yes
+      instance_tags:
+        Name: "Master-node"
+        project: cluster
+        owner: k8s
+      count_tag:
+        Name: "Master-node"
+        project: cluster
+        owner: k8s
+    register: master_out
+
+
+
+  
+
+
+
+
+
 
