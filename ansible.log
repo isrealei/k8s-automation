@@ -986,3 +986,71 @@ The offending line appears to be:
 2023-03-06 17:37:17,916 p=17359 u=ubuntu n=ansible | master                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
 2023-03-06 17:37:17,916 p=17359 u=ubuntu n=ansible | worker1                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
 2023-03-06 17:37:17,916 p=17359 u=ubuntu n=ansible | worker2                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:00:39,012 p=17912 u=ubuntu n=ansible | PLAY [This playbook is for creating ec2 instancesd for master and worker-nodes] ********************************************************************************************************************
+2023-03-06 18:00:39,032 p=17912 u=ubuntu n=ansible | TASK [import variables] ****************************************************************************************************************************************************************************
+2023-03-06 18:00:39,048 p=17912 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 18:00:39,053 p=17912 u=ubuntu n=ansible | TASK [import variable] *****************************************************************************************************************************************************************************
+2023-03-06 18:00:39,066 p=17912 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 18:00:39,071 p=17912 u=ubuntu n=ansible | TASK [create security group for master node] *******************************************************************************************************************************************************
+2023-03-06 18:00:40,720 p=17912 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 18:00:40,726 p=17912 u=ubuntu n=ansible | TASK [Update security group to allow traffic within itself] ****************************************************************************************************************************************
+2023-03-06 18:00:42,859 p=17912 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 18:00:42,865 p=17912 u=ubuntu n=ansible | TASK [Create secuirty for worker-nodes] ************************************************************************************************************************************************************
+2023-03-06 18:00:44,074 p=17912 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 18:00:44,080 p=17912 u=ubuntu n=ansible | TASK [Create secuirty for worker-nodes] ************************************************************************************************************************************************************
+2023-03-06 18:00:45,233 p=17912 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 18:00:45,239 p=17912 u=ubuntu n=ansible | TASK [create key pair for all clusternodes] ********************************************************************************************************************************************************
+2023-03-06 18:00:46,246 p=17912 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 18:00:46,253 p=17912 u=ubuntu n=ansible | TASK [store key into file for ssh] *****************************************************************************************************************************************************************
+2023-03-06 18:00:46,283 p=17912 u=ubuntu n=ansible | skipping: [localhost]
+2023-03-06 18:00:46,289 p=17912 u=ubuntu n=ansible | TASK [ec2 instance for master-node] ****************************************************************************************************************************************************************
+2023-03-06 18:00:47,520 p=17912 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 18:00:47,527 p=17912 u=ubuntu n=ansible | TASK [ec2-instances for workernodes] ***************************************************************************************************************************************************************
+2023-03-06 18:00:48,563 p=17912 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 18:00:48,569 p=17912 u=ubuntu n=ansible | TASK [ec2-instances for workernodes] ***************************************************************************************************************************************************************
+2023-03-06 18:00:49,590 p=17912 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 18:00:49,596 p=17912 u=ubuntu n=ansible | TASK [Update all nodes ip into vars file] **********************************************************************************************************************************************************
+2023-03-06 18:00:49,976 p=17912 u=ubuntu n=ansible | changed: [localhost]
+2023-03-06 18:00:49,982 p=17912 u=ubuntu n=ansible | TASK [create an inventory file for k8s cluster] ****************************************************************************************************************************************************
+2023-03-06 18:00:50,224 p=17912 u=ubuntu n=ansible | ok: [localhost]
+2023-03-06 18:00:50,233 p=17912 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:00:50,233 p=17912 u=ubuntu n=ansible | localhost                  : ok=12   changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-03-06 18:01:12,728 p=18213 u=ubuntu n=ansible | PLAY [this playbook is to set host ip mapping in etc/hosts directory] ******************************************************************************************************************************
+2023-03-06 18:01:12,740 p=18213 u=ubuntu n=ansible | TASK [import ips] **********************************************************************************************************************************************************************************
+2023-03-06 18:01:12,783 p=18213 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:01:12,785 p=18213 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:01:12,792 p=18213 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:01:12,796 p=18213 u=ubuntu n=ansible | TASK [Update etc/host files on all nodes] **********************************************************************************************************************************************************
+2023-03-06 18:01:12,874 p=18213 u=ubuntu n=ansible | fatal: [master]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 18:01:12,887 p=18213 u=ubuntu n=ansible | fatal: [worker1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 18:01:12,894 p=18213 u=ubuntu n=ansible | fatal: [worker2]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'master' is undefined\n\nThe error appears to be in '/home/ubuntu/k8s-automation/set_host_names.yaml': line 8, column 5, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n  - name: Update etc/host files on all nodes\n    ^ here\n"}
+2023-03-06 18:01:12,895 p=18213 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:01:12,895 p=18213 u=ubuntu n=ansible | master                     : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:01:12,896 p=18213 u=ubuntu n=ansible | worker1                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:01:12,896 p=18213 u=ubuntu n=ansible | worker2                    : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:02:11,664 p=18240 u=ubuntu n=ansible | PLAY [this playbook is to set host ip mapping in etc/hosts directory] ******************************************************************************************************************************
+2023-03-06 18:02:11,676 p=18240 u=ubuntu n=ansible | TASK [import ips] **********************************************************************************************************************************************************************************
+2023-03-06 18:02:11,721 p=18240 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:02:11,725 p=18240 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:02:11,731 p=18240 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:02:11,735 p=18240 u=ubuntu n=ansible | TASK [Update etc/host files on all nodes] **********************************************************************************************************************************************************
+2023-03-06 18:02:13,412 p=18240 u=ubuntu n=ansible | changed: [worker1]
+2023-03-06 18:02:13,418 p=18240 u=ubuntu n=ansible | changed: [worker2]
+2023-03-06 18:02:13,421 p=18240 u=ubuntu n=ansible | changed: [master]
+2023-03-06 18:02:13,430 p=18240 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:02:13,430 p=18240 u=ubuntu n=ansible | master                     : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:02:13,430 p=18240 u=ubuntu n=ansible | worker1                    : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:02:13,431 p=18240 u=ubuntu n=ansible | worker2                    : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:02:30,755 p=18292 u=ubuntu n=ansible | PLAY [this playbook is to set host ip mapping in etc/hosts directory] ******************************************************************************************************************************
+2023-03-06 18:02:30,768 p=18292 u=ubuntu n=ansible | TASK [import ips] **********************************************************************************************************************************************************************************
+2023-03-06 18:02:30,811 p=18292 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:02:30,813 p=18292 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:02:30,822 p=18292 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:02:30,826 p=18292 u=ubuntu n=ansible | TASK [Update etc/host files on all nodes] **********************************************************************************************************************************************************
+2023-03-06 18:02:31,763 p=18292 u=ubuntu n=ansible | ok: [worker2]
+2023-03-06 18:02:31,766 p=18292 u=ubuntu n=ansible | ok: [worker1]
+2023-03-06 18:02:31,780 p=18292 u=ubuntu n=ansible | ok: [master]
+2023-03-06 18:02:31,789 p=18292 u=ubuntu n=ansible | PLAY RECAP *****************************************************************************************************************************************************************************************
+2023-03-06 18:02:31,789 p=18292 u=ubuntu n=ansible | master                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:02:31,789 p=18292 u=ubuntu n=ansible | worker1                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-03-06 18:02:31,789 p=18292 u=ubuntu n=ansible | worker2                    : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
