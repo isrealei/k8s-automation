@@ -1,0 +1,25 @@
+- name: This playbook is for creating ec2 instancesd for master and worker-nodes
+  hosts: localhost 
+  gather_facts: no
+  connection: local
+  tasks: 
+  - name: import variables
+    include_vars: vars/output-vars
+  - name: import variable
+    include_vars: vpc_setup
+
+  - name: create security group for master node
+    ec2_group:
+      name: master-sg
+      description: security group for master-node
+      vpc_id: "{{vpcid}}"
+      region: "{{region}}"
+      state: "{{state}}"
+      purge_rules: no
+      rules:
+      - proto: tcp
+        ports:
+        - 6443
+        cidr_ip: 0.0.0.0/0
+        rule_desc: allow all on port 6443
+    register: master_sg_out
