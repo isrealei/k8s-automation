@@ -42,7 +42,7 @@
       creates: /home/ubuntu/done.txt
 
 
-- name: This playbook is to set up the kubernetes worker node
+- name: This playbook is to Initialize the kubernetes cluster
   hosts: mastergrp
   gather_facts: false
   become: yes
@@ -68,10 +68,7 @@
       group: ubuntu
       remote_src: yes
 
-  - name: set host name
-    shell:  hostnamectl set-hostname master>> /home/ubuntu/host.txt
-    args:
-      creates: /home/ubuntu/host.txt 
+  
 
   - name: install pod network add on
     shell: wget https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
