@@ -80,5 +80,6 @@
 
   - name: Apply weavenet configuration file
     shell: kubectl apply -f weave-daemonset-k8s.yaml >> pre.txt
+    remote_src: yes
     args:
       creates: pre.txt
