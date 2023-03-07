@@ -74,4 +74,11 @@
       creates: /home/ubuntu/host.txt 
 
   - name: install pod network add on
-    shell: kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+    shell: wget https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+    args:
+      creates: weave-daemonset-k8s.yaml
+
+  - name: Apply weavenet configuration file
+    shell: kubectl apply -f weave-daemonset-k8s.yaml >> pre.txt
+    args:
+      creates: pre.txt
