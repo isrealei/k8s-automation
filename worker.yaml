@@ -20,3 +20,4 @@
     shell:  "{{ hostvars['master'].join_command }} --ignore-preflight-errors all  >> node_joined.txt"
     args:
       creates: node_joined.txt
+

@@ -11,3 +11,24 @@
         {{master}} master
         {{worker1}} worker1
         {{worker2}} worker2
+
+  - name: set host name for master node
+    shell:  hostnamectl set-hostname master>> /home/ubuntu/host.txt
+    args:
+      creates: /home/ubuntu/host.txt 
+
+  - name: change host-name of worker 1
+    hosts: worker1
+    become: yes
+    tasks:
+    - shell:  hostnamectl set-hostname worker1 >> /home/ubuntu/worker1.txt
+      args:
+       creates: worker1.txt
+
+  - name: change host-name of worker 2
+    hosts: worker2
+    become: yes
+    tasks:
+    - shell:  hostnamectl set-hostname worker1 >> /home/ubuntu/worker2.txt
+      args:
+       creates: worker2.txt
