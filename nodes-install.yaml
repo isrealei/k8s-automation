@@ -1,6 +1,6 @@
 - name: This playbook is for creating ec2 instances for master and worker-nodes
   hosts: localhost 
-  gather_facts: false
+  gather_facts: no
   connection: local
   tasks: 
   - name: import variables
