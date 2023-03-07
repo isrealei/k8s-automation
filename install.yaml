@@ -79,6 +79,6 @@
       creates: weave-daemonset-k8s.yaml
 
   - name: Apply weavenet configuration file
-    shell: kubectl apply -f weave-daemonset-k8s.yaml >> pre.txt
+    command: kubectl apply -f weave-daemonset-k8s.yaml >> pre.txt
     args:
       creates: pre.txt
