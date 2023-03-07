@@ -1,6 +1,5 @@
 - name: This playbook is to set host ip mapping in etc/hosts directory
   hosts: cluster
-  gather_facts: no
   tasks:
   - name:  import ips
     include_vars: vars/hostips
