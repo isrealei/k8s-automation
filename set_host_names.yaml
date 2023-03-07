@@ -1,4 +1,4 @@
-- name: this playbook is to set host ip mapping in etc/hosts directory
+- name: This playbook is to set host ip mapping in etc/hosts directory
   hosts: cluster
   gather_facts: no
   tasks:
@@ -9,6 +9,6 @@
     blockinfile:
       path: /etc/hosts
       block: |
-        {{master_node}} master-node
+        {{master}} master
         {{worker1}} worker1
         {{worker2}} worker2

@@ -15,7 +15,7 @@
   - name: disable swapp
     shell: swapoff -a
     args:
-     removes: swap.txt
+      creates: /home/ubuntu/cont.sh
 
   - name: Copy script to nodes
     copy:
@@ -27,19 +27,19 @@
     script: /home/ubuntu/cont.sh 
     args:
       exeutable: /bin/bash
-      removes: cri.txt
+      creates: /home/ubuntu/.kube/config
 
-  - name: Copy script to nodes
+  - name: Copy script for installing kubeadm, kubectl and kubelet to  nodes
     copy:
       src: templates/kube.sh
       dest: /home/ubuntu/kube.sh
       mode: '0755'
 
-  - name: Execute script file on remote host
+  - name: Execute script file for installing kubeadm, kubectl and kubelet on remote host
     script: /home/ubuntu/kube.sh
     args:
       exeutable: /bin/bash
-      removes: kube.txt 
+      creates: /home/ubuntu/.kube/config
 
 
 - name: This playbook is to set up the kubernetes worker node
@@ -48,14 +48,16 @@
   become: yes
   tasks:
   - name: Initialize Kubernetes cluster
-    command: kubeadm init
+    shell: kubeadm init
     args:
-      removes: kube.yxy
+      creates: /home/ubuntu/.kube/config
+  
 
   - name: creat .kube directory
     file:
       path: /home/ubuntu/.kube
       state: directory
+      mode: 0755
         
   - name: Copy kube config file to home directory
     copy: 
@@ -66,5 +68,9 @@
       group: ubuntu
       remote_src: yes
 
-  - name: ste host name
-    command: sudo hostnamectl set-hostname master
+  - name: set host name
+    shell:  hostnamectl set-hostname master-node
+  
+
+  - name: install pod network add on
+    shell: kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
