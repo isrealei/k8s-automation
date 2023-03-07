@@ -24,10 +24,10 @@
       mode: '0755'
 
   - name: Execute script file on remote host
-    script: /home/ubuntu/cont.sh 
+    script: /home/ubuntu/cont.sh >> done.sh
     args:
       exeutable: /bin/bash
-      creates: /home/ubuntu/.kube/config
+      creates: /home/ubuntu/done.sh
 
   - name: Copy script for installing kubeadm, kubectl and kubelet to  nodes
     copy:
@@ -36,21 +36,21 @@
       mode: '0755'
 
   - name: Execute script file for installing kubeadm, kubectl and kubelet on remote host
-    script: /home/ubuntu/kube.sh
+    script: /home/ubuntu/kube.sh >> done.txt
     args:
       exeutable: /bin/bash
-      creates: /home/ubuntu/.kube/config
+      creates: /home/ubuntu/done.txt
 
 
 - name: This playbook is to set up the kubernetes worker node
   hosts: mastergrp
-  gather_facts: no
+  gather_facts: false
   become: yes
   tasks:
   - name: Initialize Kubernetes cluster
-    shell: kubeadm init
+    shell: kubeadm init >> k8s.txt
     args:
-      creates: /home/ubuntu/.kube/config
+      creates: /home/ubuntu/k8s.txt
   
 
   - name: creat .kube directory
